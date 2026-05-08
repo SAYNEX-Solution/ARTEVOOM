@@ -1,0 +1,147 @@
+.productSection {
+  padding: 120px 5%;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 0.9rem;
+  opacity: 0.5;
+  font-weight: 300;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 40px;
+  padding-bottom: 15px;
+}
+
+.filterTabs {
+  display: flex;
+  gap: 30px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  color: #fff;
+  opacity: 0.5;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 5px 0;
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.tab:hover, .tab.active {
+  opacity: 1;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primary-gold);
+}
+
+.sortBtn {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  cursor: pointer;
+}
+
+.imageBox {
+  aspect-ratio: 3/4;
+  background: #1c1917;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(197, 163, 104, 0.1);
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--primary-gold);
+}
+
+.info {
+  text-align: left;
+}
+
+.info h3 {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.catName {
+  font-size: 0.75rem;
+  opacity: 0.5;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.price {
+  font-size: 0.9rem;
+  color: var(--primary-gold);
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .filterTabs { 
+    gap: 20px; 
+    overflow-x: auto; 
+    padding-bottom: 10px;
+    width: 100%;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  .filterTabs::-webkit-scrollbar {
+    display: none;
+  }
+  .tab { font-size: 0.8rem; flex-shrink: 0; }
+}

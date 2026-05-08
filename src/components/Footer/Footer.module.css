@@ -1,0 +1,162 @@
+.footer {
+  background: #3d342c; /* Deep brown background */
+  color: #e8e2d9; /* Ivory text */
+}
+
+.topSection {
+  background: #e8e2d9;
+  color: #4a3f35;
+  padding: 100px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.topSection h2 {
+  font-size: 3.5rem;
+  letter-spacing: 0.2em;
+  margin: 0;
+  color: #3d342c;
+}
+
+.tagline {
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+  font-weight: 300;
+  margin: 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 100px 40px 0; /* Added top padding */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+
+.column h3 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 30px;
+  color: #e8e2d9; /* Ivory header */
+  opacity: 0.9;
+}
+
+.column ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.column ul li a {
+  color: #e8e2d9;
+  text-decoration: none;
+}
+
+.column ul li {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  letter-spacing: 0.05em;
+  transition: opacity 0.3s ease;
+}
+
+.column ul li:hover {
+  opacity: 1;
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.socials button {
+  color: #e8e2d9;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.socials button:hover {
+  opacity: 1;
+}
+
+.bottomBar {
+  max-width: 1400px;
+  margin: 80px auto 0;
+  padding: 40px 40px 0;
+  border-top: 1px solid rgba(232, 226, 217, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+  color: #e8e2d9;
+  opacity: 0.5;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 1024px) {
+  .topSection {
+    padding: 80px 40px;
+  }
+  .topSection h2 {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 80px 24px 0;
+  }
+  .grid {
+    gap: 40px;
+  }
+  .bottomBar {
+    padding: 30px 24px;
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topSection {
+    padding: 60px 20px;
+  }
+  .topSection h2 {
+    font-size: 1.8rem;
+    letter-spacing: 0.15em;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+  .column h3 {
+    margin-bottom: 20px;
+  }
+  .socials {
+    justify-content: center;
+  }
+  .bottomBar {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding-bottom: 80px; /* Extra padding for floating widgets */
+  }
+}
+
+

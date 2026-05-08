@@ -1,0 +1,476 @@
+.productDetail {
+  background: #121110;
+  color: #e8e2d9;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 1. Main Product Section */
+.mainSection {
+  display: flex;
+  min-height: auto;
+  width: 100%;
+  padding: 0;
+  background: #121110;
+}
+
+.productImage {
+  flex: 1.4;
+  position: relative; /* Make relative for absolute image */
+  background: #1a1918;
+}
+
+.productImage img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.productBuyBox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 100px 80px; /* Add top/bottom padding to give the section its natural height */
+}
+
+.buyBoxContent {
+  max-width: 500px;
+  width: 100%;
+}
+
+.subName {
+  font-family: 'Pretendard', sans-serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  opacity: 0.6;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.buyBoxContent h2 {
+  font-size: 4rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+
+.shortDesc {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.priceRow {
+  margin-bottom: 50px;
+  border-top: 1px solid rgba(232, 226, 217, 0.1);
+  padding-top: 30px;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.metaInfo p {
+  font-size: 0.9rem;
+  opacity: 0.5;
+  margin-bottom: 5px;
+}
+
+.actions {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.quantitySelector {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(232, 226, 217, 0.3);
+  padding: 0 15px;
+  gap: 20px;
+}
+
+.quantitySelector button {
+  color: #e8e2d9;
+  opacity: 0.6;
+}
+
+.addBtn {
+  flex: 1;
+  background: #9d846b;
+  color: #121110;
+  font-weight: 600;
+  padding: 18px;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  transition: background 0.3s ease;
+}
+
+.addBtn:hover {
+  background: #b59b82;
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.benefitItem p {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.benefitItem span {
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+/* 2. Story Section */
+.storySection {
+  display: flex;
+  height: 600px;
+  background: #1a1918;
+}
+
+.storyText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 100px;
+}
+
+.storyText h3 {
+  font-size: 2.2rem;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+
+.line {
+  width: 40px;
+  height: 1px;
+  background: rgba(232, 226, 217, 0.3);
+  margin-bottom: 30px;
+}
+
+.storyText p {
+  font-size: 1rem;
+  line-height: 1.8;
+  opacity: 0.7;
+  font-weight: 300;
+}
+
+.storyImage {
+  flex: 1.5;
+}
+
+.storyImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 3. Fragrance Notes Section */
+.notesSection {
+  padding: 120px 80px;
+  background: #121110;
+}
+
+.notesContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  gap: 100px;
+}
+
+.notesList {
+  flex: 1;
+}
+
+.notesList h3 {
+  font-size: 1.8rem;
+  margin-bottom: 60px;
+  letter-spacing: 0.1em;
+}
+
+.noteItem {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #9d846b;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+.noteItem::after {
+  content: '';
+  position: absolute;
+  left: 3.5px;
+  top: 20px;
+  height: 50px;
+  width: 1px;
+  background: rgba(157, 132, 107, 0.2);
+}
+
+.noteItem:last-child::after { display: none; }
+
+.noteItem h4 {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  opacity: 0.4;
+  margin-bottom: 8px;
+}
+
+.noteItem p {
+  font-family: 'Pretendard', sans-serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.notesGallery {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.galleryItem {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.galleryItem img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.galleryItem span {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  opacity: 0.5;
+  text-align: center;
+}
+
+/* 4. Product Info Section */
+.infoSection {
+  padding: 120px 80px;
+  background: #121110;
+}
+
+.infoContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  background: #1a1918;
+  border: 1px solid rgba(232, 226, 217, 0.05);
+}
+
+.infoImage {
+  flex: 1;
+  position: relative;
+  min-height: 500px;
+}
+
+.infoImage img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.infoTable {
+  flex: 1.5;
+  padding: 80px;
+}
+
+.infoTable h3 {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  letter-spacing: 0.1em;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table tr {
+  border-bottom: 1px solid rgba(232, 226, 217, 0.1);
+}
+
+.table th {
+  text-align: left;
+  padding: 20px 0;
+  width: 200px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.6;
+}
+
+.table td {
+  padding: 20px 0;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .mainSection {
+    flex-direction: column;
+  }
+  .productImage {
+    flex: none;
+    height: 600px;
+  }
+  .productBuyBox {
+    padding: 60px 40px;
+  }
+  .buyBoxContent {
+    max-width: 100%;
+    text-align: center;
+  }
+  .buyBoxContent h2 {
+    font-size: 3rem;
+  }
+  .actions {
+    justify-content: center;
+  }
+  .benefits {
+    align-items: center;
+    text-align: center;
+  }
+  .benefitItem {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .storySection {
+    flex-direction: column;
+    height: auto;
+  }
+  .storyText {
+    padding: 80px 40px;
+    text-align: center;
+  }
+  .line {
+    margin: 0 auto 30px;
+  }
+  .storyImage {
+    height: 400px;
+  }
+
+  .notesSection {
+    padding: 80px 40px;
+  }
+  .notesContainer {
+    flex-direction: column;
+    gap: 60px;
+    text-align: center;
+  }
+  .notesList h3 {
+    margin-bottom: 40px;
+  }
+  .noteItem {
+    justify-content: center;
+    text-align: left;
+  }
+  .notesGallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .infoSection {
+    padding: 80px 40px;
+  }
+  .infoContainer {
+    flex-direction: column;
+  }
+  .infoImage {
+    height: 300px;
+    min-height: auto;
+  }
+  .infoTable {
+    padding: 40px 20px;
+  }
+  .table th {
+    width: 120px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .productImage {
+    height: 500px;
+  }
+  .buyBoxContent h2 {
+    font-size: 2.4rem;
+  }
+  .notesGallery {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .infoTable h3 {
+    text-align: center;
+  }
+  .table th, .table td {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .table th {
+    padding-bottom: 5px;
+    opacity: 0.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .productImage {
+    height: 400px;
+  }
+  .productBuyBox {
+    padding: 40px 20px;
+  }
+  .buyBoxContent h2 {
+    font-size: 2rem;
+  }
+  .actions {
+    flex-direction: column;
+  }
+  .quantitySelector {
+    justify-content: center;
+    padding: 15px;
+  }
+  .storyText {
+    padding: 60px 20px;
+  }
+  .storyText h3 {
+    font-size: 1.6rem;
+  }
+  .notesSection {
+    padding: 60px 20px;
+  }
+}
+

@@ -1,0 +1,146 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #0a0a0a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  object-position: right center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%);
+  z-index: 2;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px;
+  position: relative;
+  z-index: 10;
+}
+
+.content {
+  text-align: left;
+  max-width: 700px;
+}
+
+.subtitle {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-bottom: 2px; /* Even tighter gap */
+  opacity: 1;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  text-transform: lowercase;
+  font-weight: 500; /* Increased weight */
+  text-shadow: 0 0 1px rgba(255,255,255,0.1); /* Subtle thickness boost */
+}
+
+.content h1 {
+  font-size: 7.5rem;
+  margin-bottom: 20px;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  color: #ffffff;
+  font-weight: 400;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.description {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  margin-bottom: 40px;
+  letter-spacing: 0.02em;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+
+.cta {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (max-width: 1024px) {
+  .content h1 {
+    font-size: clamp(4rem, 10vw, 6rem);
+  }
+  .subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+  .hero {
+    align-items: center;
+    text-align: center;
+  }
+  .content {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  .content h1 {
+    font-size: clamp(3rem, 12vw, 4.5rem);
+    margin-bottom: 24px;
+  }
+  .description {
+    font-size: 1rem;
+    margin-bottom: 32px;
+    padding: 0 10px;
+  }
+  .cta {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .content h1 {
+    font-size: 2.8rem;
+    letter-spacing: 0.02em;
+  }
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+
+
+

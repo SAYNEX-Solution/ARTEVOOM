@@ -90,7 +90,7 @@ const Collection = () => {
 
         <div className={styles.featuredProduct}>
           {products.map((product) => (
-            <Link href={`/products/${product.id}`} key={product.id}>
+            <Link href={`/products`} key={product.id}>
               <motion.div 
                 className={styles.productCard}
                 whileHover={{ y: -5 }}

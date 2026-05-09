@@ -98,14 +98,6 @@ export default function LoginPage() {
 
             <div className={styles.divider}>또는</div>
 
-            <div className={styles.socialBtns}>
-              <button type="button" className={styles.socialBtn} onClick={() => handleSocialLogin("naver")}>
-                <div className={`${styles.socialIcon} ${styles.naverIcon}`}>N</div>
-                네이버로 로그인
-              </button>
-            </div>
-
-
             <div className={styles.footer}>
               아직 계정이 없으신가요? 
               <Link href="/register" className={styles.link}>

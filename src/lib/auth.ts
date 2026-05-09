@@ -1,6 +1,5 @@
 import { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import NaverProvider from "next-auth/providers/naver";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import prisma from "@/lib/prisma";
 import bcrypt from "bcryptjs";
@@ -13,11 +12,6 @@ export const authOptions: NextAuthOptions = {
     strategy: "jwt",
   },
   providers: [
-    NaverProvider({
-      clientId: process.env.NAVER_CLIENT_ID || "",
-      clientSecret: process.env.NAVER_CLIENT_SECRET || "",
-      allowDangerousEmailAccountLinking: true,
-    }),
     CredentialsProvider({
 
       name: "Credentials",

@@ -116,8 +116,8 @@ export default function CheckoutPage() {
   }
 
   return (
-    <main style={{ background: "#121110", color: "#e8e2d9", minHeight: "100vh", paddingTop: "80px" }}>
-      <PageHeader title="주문 / 결제" description="선택하신 상품을 안전하게 배송해 드립니다." />
+    <main style={{ background: "var(--bg-color)", color: "var(--text-color)", minHeight: "100vh", paddingTop: "80px" }}>
+      <PageHeader title="ORDER" description="선택하신 상품을 안전하게 배송해 드립니다." />
       <div className={styles.container}>
         <div className={styles.leftSide}>
           <section>
